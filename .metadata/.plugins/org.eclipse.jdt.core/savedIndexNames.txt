@@ -1,3 +1,4 @@
 INDEX VERSION 1.131+C:\Users\Felipe&Janaira\Desktop\Projetos Java\Ler arquivo texto CSV\.metadata\.plugins\org.eclipse.jdt.core
 1865797976.index
 2375924588.index
+444892081.index
