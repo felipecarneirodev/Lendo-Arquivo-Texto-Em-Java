@@ -10,7 +10,12 @@ public class Program {
 		
 		String path = "C:\\temp\\in.txt";
 		
-		try (BufferedReader br = new BufferedReader(new FileReader(path))){
+		FileReader fr = null;
+		BufferedReader br = null;
+		
+		try {
+			fr = new FileReader(path);
+			br = new BufferedReader(fr);
 			
 			String line = br.readLine();
 			while(line != null) {
@@ -20,6 +25,15 @@ public class Program {
 		}	
 		catch(IOException e) {
 			System.out.println("Error: " + e.getMessage());
+		}
+		finally {
+			try {
+			fr.close();
+			br.close();
+			}
+			catch(IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }

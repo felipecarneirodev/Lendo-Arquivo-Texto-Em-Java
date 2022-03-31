@@ -21,5 +21,14 @@ public class Program {
 		catch(IOException e) {
 			System.out.println("Error: " + e.getMessage());
 		}
+		finally {
+			try {
+			fr.close();
+			br.close();
+			}
+			catch(IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 }
